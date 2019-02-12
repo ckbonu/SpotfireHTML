@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Welcome</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="css/logo-nav.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="img/white-logo_hero.png" alt="SportTG">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active" id="dashboard">
+						<a class="nav-link" href="#">Dashboard
+						</a>
+					</li>
+					<li class="nav-item" id="reports">
+						<a class="nav-link" href="#">Reports</a>
+					</li>
+					<li class="nav-item" id="logout">
+						<a class="nav-link" href="#">Logout</a>
+					</li>
+				</ul>
+				<strong><div class="pull-right text-white" id="userName"></div></strong>
+			</div>
+		</div>
+	</nav>
+
+	<form id="sfauthParent" name="sfauth" method="get" action="http://13.239.36.220/spotfire/sf_security_check_external_auth">
+		<input type="hidden" name="sf_custom_login_userName" id="sf_custom_login_userName">
+		<input type="hidden" name="file" id="file" value="/v_wave_settlement_summary_2">
+	</form>
+
+	<!-- Page Content -->
+	<div class="container fill">
+		<div class="wrap">
+			<iframe id="sfContainer" name="sf_Container" class="wrap" src="sfContainer.html"></iframe>
+		</div>
+	</div>
+	<!-- /.container -->
+
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<script src="js/landing.js"></script>
+</body>
+
+</html>
